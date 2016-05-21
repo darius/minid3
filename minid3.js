@@ -67,7 +67,7 @@ function data(data) {
 function style(name, setting) {
   this.forEach(function(subSelection) {
     var i = 0;
-    subSelection.forEach(function(element) {
+    subSelection.forEach(function(element) { // XXX could we take an extra arg ,i here, instead counting up ourselves?
       if (typeof setting === 'function') {
         element.style[name] = setting(element.__data__, i);
       } else {
